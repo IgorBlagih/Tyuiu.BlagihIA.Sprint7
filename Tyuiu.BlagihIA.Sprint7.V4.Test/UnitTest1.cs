@@ -1,4 +1,4 @@
-namespace Tyuiu.Sprint7.Project.V4.Test
+namespace Tyuiu.BlagihIA.Sprint7.V4.Test
 {
     [TestClass]
     public class UnitTest1

@@ -1,4 +1,4 @@
-﻿namespace Tyuiu.Sprint7.Project.V4
+﻿namespace Tyuiu.BlagihIA.Sprint7.V4
 {
     partial class Form1
     {
@@ -40,7 +40,7 @@
             toolTip1 = new ToolTip(components);
             saveFileDialog1 = new SaveFileDialog();
             toolTip2 = new ToolTip(components);
-            openFileDialogTask = new OpenFileDialog();
+            openFileDialogTask_BIA = new OpenFileDialog();
             panelTop_BIA.SuspendLayout();
             groupBoxTop_BIA.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -54,7 +54,7 @@
             panelTop_BIA.Location = new Point(0, 0);
             panelTop_BIA.Name = "panelTop_BIA";
             panelTop_BIA.Size = new Size(800, 142);
-            panelTop_BIA.TabIndex = 0;
+            panelTop_BIA.TabIndex = 1;
             // 
             // groupBoxTop_BIA
             // 
@@ -104,7 +104,9 @@
             comboBoxAuthors_BIA.Location = new Point(6, 19);
             comboBoxAuthors_BIA.Name = "comboBoxAuthors_BIA";
             comboBoxAuthors_BIA.Size = new Size(585, 23);
+            comboBoxAuthors_BIA.Sorted = true;
             comboBoxAuthors_BIA.TabIndex = 0;
+            comboBoxAuthors_BIA.SelectedValueChanged += comboBoxAuthors_BIA_SelectedValueChanged;
             // 
             // buttonOpenFile_BIA
             // 
@@ -130,10 +132,6 @@
             toolTip2.ToolTipIcon = ToolTipIcon.Info;
             toolTip2.ToolTipTitle = "Подсказка";
             // 
-            // openFileDialogTask
-            // 
-            openFileDialogTask.FileName = "openFileDialog1";
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -153,14 +151,14 @@
 
         private Panel panelTop_BIA;
         private GroupBox groupBoxTop_BIA;
+        private GroupBox groupBox2;
+        private ComboBox comboBoxBooks_BIA;
+        private GroupBox groupBox1;
         private ComboBox comboBoxAuthors_BIA;
         private Button buttonOpenFile_BIA;
         private ToolTip toolTip1;
-        private GroupBox groupBox1;
-        private GroupBox groupBox2;
-        private ComboBox comboBoxBooks_BIA;
         private SaveFileDialog saveFileDialog1;
         private ToolTip toolTip2;
-        private OpenFileDialog openFileDialogTask;
+        private OpenFileDialog openFileDialogTask_BIA;
     }
 }

@@ -1,4 +1,4 @@
-namespace Tyuiu.Sprint7.Project.V4
+namespace Tyuiu.BlagihIA.Sprint7.V4
 {
     internal static class Program
     {
