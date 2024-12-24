@@ -10,7 +10,7 @@ namespace Tyuiu.BlagihIA.Sprint7.V4
         static string openFilePath;
         static int rows;
         static int colums;
-        Class1 ds = new Class1();
+        //Class1 ds = new Class1();
 
         
 
@@ -20,8 +20,10 @@ namespace Tyuiu.BlagihIA.Sprint7.V4
             openFileDialogTask_BIA.ShowDialog();
             openFilePath = openFileDialogTask_BIA.FileName;
 
-            string[,] authors = LoadFromFileData(openFilePath);
 
+            string[,] authors = Class1.LoadFromFileData(openFilePath);
+            rows = authors.GetLength(0);
+            colums = authors.GetLength(1);
             for (int i = 1; i < rows; i++)
             {
                 for (int j = 1; j <= 1; j++)
@@ -43,10 +45,11 @@ namespace Tyuiu.BlagihIA.Sprint7.V4
         private void comboBoxAuthors_BIA_SelectedValueChanged(object sender, EventArgs e)
         {
             
-            string[,] authors = LoadFromFileData(openFilePath);
+            string[,] authors = Class1.LoadFromFileData(openFilePath);
+            rows = authors.GetLength(0);
+            colums = authors.GetLength(1);
 
-            string word = Convert.ToString(comboBoxAuthors_BIA.SelectedItem;
-            switch (word)
+            switch (Convert.ToString(comboBoxAuthors_BIA.SelectedItem))
             {
                 
                 case "Антон Чехов":
