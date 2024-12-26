@@ -10,9 +10,11 @@ namespace Tyuiu.BlagihIA.Sprint7.V4
         static string openFilePath;
         static int rows;
         static int colums;
+        int index;
+
         //Class1 ds = new Class1();
 
-        
+
 
 
         private void buttonOpenFile_BIA_Click(object sender, EventArgs e)
@@ -44,29 +46,29 @@ namespace Tyuiu.BlagihIA.Sprint7.V4
 
         private void comboBoxAuthors_BIA_SelectedValueChanged(object sender, EventArgs e)
         {
-            
+
             string[,] authors = Class1.LoadFromFileData(openFilePath);
             rows = authors.GetLength(0);
             colums = authors.GetLength(1);
 
             switch (Convert.ToString(comboBoxAuthors_BIA.SelectedItem))
             {
-                
+
                 case "Антон Чехов":
                     comboBoxBooks_BIA.Items.Clear();
                     for (int i = 1; i < rows; i++)
                     {
                         for (int j = 0; j < rows; j++)
                         {
-                            if (authors[i,1] == "Антон Чехов")
+                            if (authors[i, 1] == "Антон Чехов")
                             {
                                 if (!comboBoxBooks_BIA.Items.Contains(authors[i, 0]))
                                 {
                                     comboBoxBooks_BIA.Items.Add(authors[i, 0]);
                                 }
-                                
+
                             }
-                            
+
                         }
                     }
                     break;
@@ -144,7 +146,7 @@ namespace Tyuiu.BlagihIA.Sprint7.V4
                     break;
 
                 case "Михаил Булгаков":
-                    comboBoxBooks_BIA.Items.Clear();    
+                    comboBoxBooks_BIA.Items.Clear();
                     for (int i = 1; i < rows; i++)
                     {
                         for (int j = 0; j < rows; j++)
@@ -215,6 +217,36 @@ namespace Tyuiu.BlagihIA.Sprint7.V4
                     }
                     break;
             }
+        }
+
+        private void comboBoxAuthors_BIA_TextChanged(object sender, EventArgs e)
+        {
+
+            comboBoxAuthors_BIA.DataSource = comboBoxAuthors_BIA.Items;
+            comboBoxAuthors_BIA.AutoCompleteMode = AutoCompleteMode.Suggest;
+            comboBoxAuthors_BIA.AutoCompleteSource = AutoCompleteSource.CustomSource;
+
+
+
+        }
+        
+        private void comboBoxBooks_BIA_SelectedValueChanged(object sender, EventArgs e)
+        {
+            string[,] book = Class1.LoadFromFileData(openFilePath);
+            rows = book.GetLength(0);
+            colums = book.GetLength(1);
+            string word = Convert.ToString(comboBoxBooks_BIA.SelectedItem);
+            if (word != null)
+            {
+                textBoxName_BIA.Clear();
+                textBoxCost_BIA.Clear();
+                textBoxData_BIA.Clear();
+                textBoxDes_BIA.Clear();
+
+                textBoxName_BIA.AppendText(word);
+            }
+
+
         }
     }
 }
