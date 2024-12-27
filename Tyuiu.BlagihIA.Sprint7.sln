@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyuiu.BlagihIA.Sprint7.V4.Lib", "Tyuiu.BlagihIA.Sprint7.V4.Lib\Tyuiu.BlagihIA.Sprint7.V4.Lib.csproj", "{3C7BDE3C-4090-49AB-B843-835D2FFB6FAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tyuiu.BlagihIA.Sprint7.V4.Lib", "Tyuiu.BlagihIA.Sprint7.V4.Lib\Tyuiu.BlagihIA.Sprint7.V4.Lib.csproj", "{3C7BDE3C-4090-49AB-B843-835D2FFB6FAC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyuiu.BlagihIA.Sprint7.V4.Test", "Tyuiu.BlagihIA.Sprint7.V4.Test\Tyuiu.BlagihIA.Sprint7.V4.Test.csproj", "{9AED47B6-74F9-4FA5-861F-24177D776105}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tyuiu.BlagihIA.Sprint7.V4.Test", "Tyuiu.BlagihIA.Sprint7.V4.Test\Tyuiu.BlagihIA.Sprint7.V4.Test.csproj", "{9AED47B6-74F9-4FA5-861F-24177D776105}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tyuiu.BlagihIA.Sprint7.V4", "Tyuiu.BlagihIA.Sprint7.V4\Tyuiu.BlagihIA.Sprint7.V4.csproj", "{4390E26D-ACF4-44A8-AB4B-3E8873B94354}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Tyuiu.BlagihIA.Sprint7.V4", "Tyuiu.BlagihIA.Sprint7.V4\Tyuiu.BlagihIA.Sprint7.V4.csproj", "{4390E26D-ACF4-44A8-AB4B-3E8873B94354}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project.V4", "Project.V4", "{4E2D4A1F-5A44-40D0-BBB7-25FFBEDA9CE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +32,11 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3C7BDE3C-4090-49AB-B843-835D2FFB6FAC} = {4E2D4A1F-5A44-40D0-BBB7-25FFBEDA9CE0}
+		{9AED47B6-74F9-4FA5-861F-24177D776105} = {4E2D4A1F-5A44-40D0-BBB7-25FFBEDA9CE0}
+		{4390E26D-ACF4-44A8-AB4B-3E8873B94354} = {4E2D4A1F-5A44-40D0-BBB7-25FFBEDA9CE0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {10B7389B-342B-4EAE-9BC9-ED5063F0F434}
