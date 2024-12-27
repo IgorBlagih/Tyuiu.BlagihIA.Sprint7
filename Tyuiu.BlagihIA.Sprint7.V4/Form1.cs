@@ -336,9 +336,11 @@ namespace Tyuiu.BlagihIA.Sprint7.V4
                         {
                             textBoxSum_BIA.Clear();
                             count++;
+                            string z = Convert.ToString(dataGridViewCart_BIA.Rows[c].Cells[1].Value).Replace(" RUB", "");
+                            sum -= Convert.ToInt32(z);
                             dataGridViewCart_BIA.Rows[c].Cells[0].Value = null;
                             dataGridViewCart_BIA.Rows[c].Cells[1].Value = null;
-                            sum -= Convert.ToInt32(book[i, 3]);
+                            
                             textBoxSum_BIA.AppendText(Convert.ToString(sum + " RUB"));
                         }
                         if (count == 1)
